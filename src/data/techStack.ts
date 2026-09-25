@@ -8,7 +8,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Advanced',
     experienceYears: 2,
     highlight: 'AsyncIO concurrency, uvloop, Pydantic v2, async FastAPI services for streaming workloads.',
-    associatedProjects: []
+    associatedProjects: ['regulatordigest2']
   },
   {
     name: 'FastAPI',
@@ -16,7 +16,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Advanced',
     experienceYears: 2,
     highlight: 'REST endpoints, full-duplex WebSockets, dependency injection, OpenAPI schemas.',
-    associatedProjects: []
+    associatedProjects: ['regulatordigest2']
   },
   {
     name: 'TypeScript',
@@ -24,7 +24,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Advanced',
     experienceYears: 2,
     highlight: 'Strict typing, generic type-safe APIs, full-stack client-server contracts.',
-    associatedProjects: []
+    associatedProjects: ['xampiest', 'leolabs-hub']
   },
   {
     name: 'Node.js',
@@ -32,7 +32,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Proficient',
     experienceYears: 2,
     highlight: 'Event-driven services, BullMQ job queues, worker threads for background tasks.',
-    associatedProjects: []
+    associatedProjects: ['whywrong']
   },
   {
     name: 'Go',
@@ -48,7 +48,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Proficient',
     experienceYears: 2,
     highlight: 'App Router, server components, responsive real-time UIs, design systems.',
-    associatedProjects: []
+    associatedProjects: ['leolabs-hub']
   },
 
   // Databases & AI
@@ -58,7 +58,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Advanced',
     experienceYears: 2,
     highlight: 'Window queries, partial/compound indexes, advisory locks, pgBouncer pooling.',
-    associatedProjects: []
+    associatedProjects: ['regulatordigest2']
   },
   {
     name: 'pgvector',
@@ -66,7 +66,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Advanced',
     experienceYears: 2,
     highlight: 'HNSW indexes, cosine similarity tuning, hybrid lexical-semantic filtering.',
-    associatedProjects: []
+    associatedProjects: ['regulatordigest2']
   },
   {
     name: 'Supabase',
@@ -74,7 +74,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Advanced',
     experienceYears: 2,
     highlight: 'Row Level Security (RLS), edge functions, realtime Postgres subscriptions.',
-    associatedProjects: []
+    associatedProjects: ['regulatordigest2']
   },
   {
     name: 'Redis',
@@ -90,7 +90,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Proficient',
     experienceYears: 1,
     highlight: 'Fast token generation for interactive voice dialog and low-latency chat completions.',
-    associatedProjects: []
+    associatedProjects: ['regulatordigest2']
   },
   {
     name: 'Hugging Face & SentenceTransformers',
@@ -98,7 +98,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Proficient',
     experienceYears: 1,
     highlight: 'Hosted embedding models, semantic similarity, batching for vector pipelines.',
-    associatedProjects: []
+    associatedProjects: ['regulatordigest2']
   },
 
   // Infrastructure & Deployment
@@ -108,7 +108,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Advanced',
     experienceYears: 2,
     highlight: 'Multi-stage lean container builds (Alpine / Distroless), docker-compose stacks.',
-    associatedProjects: []
+    associatedProjects: ['regulatordigest2']
   },
   {
     name: 'Vercel',
@@ -116,7 +116,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Advanced',
     experienceYears: 2,
     highlight: 'Edge functions, domain routing, preview environments, zero-config CI/CD.',
-    associatedProjects: []
+    associatedProjects: ['leolabs-hub', 'xampiest']
   },
   {
     name: 'Telegram Bot API',
@@ -124,7 +124,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Proficient',
     experienceYears: 2,
     highlight: 'Long-polling & webhook integrations, inline keyboards, rate-limit handling.',
-    associatedProjects: []
+    associatedProjects: ['regulatordigest2']
   },
   {
     name: 'Render & Cloud Run',
@@ -140,7 +140,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Advanced',
     experienceYears: 2,
     highlight: 'GitHub Actions matrix testing, automated releases, branch-based previews.',
-    associatedProjects: []
+    associatedProjects: ['regulatordigest2', 'leolabs-hub', 'xampiest']
   },
   {
     name: 'Linux Systems',
@@ -148,7 +148,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Advanced',
     experienceYears: 2,
     highlight: 'Systemd service management, basic kernel tuning, bash automation, file descriptors.',
-    associatedProjects: []
+    associatedProjects: ['regulatordigest2']
   }
 ];
 
