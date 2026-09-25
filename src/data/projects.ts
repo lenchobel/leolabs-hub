@@ -10,38 +10,58 @@ import { Project } from '../types';
 export const PROJECTS: Project[] = [
   {
     id: 'regulatordigest2',
-    title: 'RegulatorDigest2',
-    tagline: 'Telegram regulatory intelligence digest, served daily via Groq + pgvector.',
+    title: 'RegDigest',
+    tagline: 'Regulatory intelligence for Ethiopian businesses — search, monitor, and ask the regulator.',
     category: 'ai',
     categoryLabel: 'AI & Automation',
     description:
-      'A backend pipeline that ingests regulator updates, summarizes them with Groq-hosted language models, indexes embeddings into pgvector for semantic retrieval, and pushes a daily digest to subscribers over a Telegram bot.',
+      'A full-stack regulatory intelligence platform that scrapes Ethiopian regulations, indexes them with hybrid (vector + full-text + trigram) search, and delivers personalized alerts plus AI-powered Q&A with conversation memory over Web, Telegram Mini App, and email.',
     problemSolved:
-      'Operators were drowning in unstructured regulator PDFs and scattered RSS feeds. RegulatorDigest2 collapses this into a single, personalized Telegram digest with semantic search over historical rulings.',
-    techStack: ['Python', 'FastAPI', 'Supabase', 'PostgreSQL', 'pgvector', 'Groq LPU', 'Hugging Face Embeddings', 'Telegram Bot API', 'Docker'],
+      'Operators and legal/compliance teams in Ethiopia were tracking regulator updates across scattered portals, RSS feeds, and PDFs. RegDigest collapses this into a single searchable corpus with scheduled alerts, AI Q&A, and multi-channel delivery.',
+    techStack: [
+      'Python',
+      'FastAPI',
+      'Supabase',
+      'PostgreSQL',
+      'pgvector',
+      'Groq LPU',
+      'Hugging Face Embeddings',
+      'Telegram Bot API',
+      'Resend',
+      'Chapa',
+      'Docker',
+      'Render',
+      'Vite',
+      'React',
+      'TypeScript',
+      'Sentry'
+    ],
     subdomain: 'regdigest.et',
     liveDemoUrl: 'https://regdigest.et',
-    // TODO: repo is private / not yet on GitHub — leave empty to hide the Source button.
-    githubUrl: '',
+    githubUrl: 'https://github.com/lenchobel/RegulatorDigest2',
     hasDownloadRelease: false,
     featured: true,
     status: 'production',
     metrics: [
-      { label: 'Pipeline Latency', value: '< 500ms', detail: 'End-to-end vector → LLM → Telegram push' },
-      { label: 'Daily Digest', value: 'Automated', detail: 'Scheduled job, idempotent retry' },
-      { label: 'Vector Index', value: 'pgvector HNSW', detail: 'Hybrid lexical-semantic retrieval' }
+      { label: 'Embeddings', value: '768-dim', detail: 'intfloat/multilingual-e5-base via HF' },
+      { label: 'Search', value: 'Hybrid', detail: 'Vector + full-text + trigram fuzzy' },
+      { label: 'LLM', value: 'Groq', detail: 'Gemini + OpenRouter fallbacks' },
+      { label: 'Alert Loop', value: '5 min', detail: 'Schedule-based scheduler service' }
     ],
     architectureDetails: {
       overview:
-        'Supabase Postgres hosts both relational data and pgvector embeddings. A FastAPI service coordinates ingestion, summarization via Groq, and delivery to Telegram subscribers.',
+        'FastAPI backend (multi-worker) + a singleton scheduler service orchestrated via docker-compose. Supabase Postgres hosts both relational data and pgvector (HNSW) for hybrid search. A React 19 + Vite frontend serves the web app; the same backend powers the Telegram Mini App, email, and an AI Q&A endpoint with conversation memory.',
       flow: [
-        { title: 'Source Ingestion', description: 'Pull regulator feeds and PDFs on a schedule.', tech: 'FastAPI + asyncio' },
-        { title: 'Embedding & Index', description: 'SentenceTransformers embed chunks; pgvector HNSW indexes them.', tech: 'Hugging Face + pgvector' },
-        { title: 'Summarization', description: 'Relevant chunks summarized via Groq-hosted LLM.', tech: 'Groq LPU' },
-        { title: 'Telegram Delivery', description: 'Bot pushes digest to subscribers with retry/backoff.', tech: 'Telegram Bot API' }
+        { title: 'Ingestion', description: 'Scraper pulls regulator sources; raw text cleaned and chunked.', tech: 'backend/scraper + backend/ingestion' },
+        { title: 'Embedding & Index', description: '768-dim SentenceTransformer embeddings stored in pgvector (HNSW) with full-text and trigram indexes.', tech: 'Hugging Face + pgvector + Postgres FTS' },
+        { title: 'AI Q&A', description: 'Hybrid retrieval feeds chunks to Groq (primary) with Gemini + OpenRouter fallbacks; answers retain conversation memory.', tech: 'Groq + fallback LLM chain' },
+        { title: 'Alerts', description: 'Scheduler evaluates user-defined filters every 5 minutes and queues notifications.', tech: 'backend/scheduler + backend/alerts' },
+        { title: 'Delivery', description: 'Pushes results to web app, Telegram Mini App, and email (Resend). Payments via Chapa.', tech: 'Telegram + Resend + Chapa' }
       ],
-      concurrencyModel: 'asyncio workers + Supabase connection pooling; per-subscriber delivery serialized through a BullMQ-style queue.',
-      throughputBenchmark: 'Tested at sub-500ms p95 from query to Telegram send on a single 2-vCPU instance.'
+      concurrencyModel:
+        'Multi-worker FastAPI behind Uvicorn for the API; a separate scheduler container runs as a singleton. Docker Compose orchestrates local dev; Render hosts the production deployment.',
+      throughputBenchmark:
+        'Sub-second p95 hybrid retrieval against the production corpus; alert evaluation loop completes in <60s for the current rule set on a single scheduler instance.'
     }
   },
   {

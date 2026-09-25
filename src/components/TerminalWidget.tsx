@@ -115,12 +115,12 @@ export const TerminalWidget: React.FC = () => {
     } else if (lower === 'skills') {
       outputResult = [
         'CORE TECHNICAL CAPABILITIES:',
-        '  Languages:    Python 3.12 (AsyncIO, uvloop), TypeScript, Node.js, Go (basic)',
-        '  Frameworks:   FastAPI, Next.js, Vite, BullMQ, Pydantic v2, React 19',
-        '  Databases:    PostgreSQL, pgvector, Supabase (RLS), Redis (Streams)',
-        '  AI / Search:  Groq (LPUs), Hugging Face embeddings, pgvector HNSW',
-        '  Delivery:     Telegram Bot API, WebSockets, REST APIs',
-        '  DevOps:       Docker, Vercel, GitHub Actions, Linux systemd'
+        '  Languages:    Python 3.11 (AsyncIO, uvloop), TypeScript, Node.js, Go (basic)',
+        '  Frameworks:   FastAPI, React 19, Vite, Pydantic v2, TanStack Query, Zod',
+        '  Databases:    PostgreSQL, pgvector (768-dim), Supabase (RLS)',
+        '  AI / Search:  Groq (LPUs), Hugging Face (multilingual-e5-base), HNSW',
+        '  Delivery:     Telegram Bot API + Mini Apps, Resend (email), Chapa',
+        '  DevOps:       Docker + Compose, Render, Vercel, Sentry, GitHub Actions'
       ];
     } else if (lower === 'curl status' || lower.startsWith('curl')) {
       if (PROJECTS.length === 0) {

@@ -24,7 +24,7 @@ export const TECH_STACK: TechItem[] = [
     level: 'Advanced',
     experienceYears: 2,
     highlight: 'Strict typing, generic type-safe APIs, full-stack client-server contracts.',
-    associatedProjects: ['xampiest', 'leolabs-hub']
+    associatedProjects: ['xampiest', 'leolabs-hub', 'regulatordigest2']
   },
   {
     name: 'Node.js',
@@ -43,12 +43,28 @@ export const TECH_STACK: TechItem[] = [
     associatedProjects: []
   },
   {
-    name: 'Next.js / React',
+    name: 'React 19',
     category: 'languages',
     level: 'Proficient',
     experienceYears: 2,
-    highlight: 'App Router, server components, responsive real-time UIs, design systems.',
-    associatedProjects: ['leolabs-hub']
+    highlight: 'Hooks, Suspense, server components, responsive real-time UIs, design systems.',
+    associatedProjects: ['leolabs-hub', 'regulatordigest2']
+  },
+  {
+    name: 'Next.js',
+    category: 'languages',
+    level: 'Proficient',
+    experienceYears: 1,
+    highlight: 'App Router, server components, edge middleware, route handlers.',
+    associatedProjects: []
+  },
+  {
+    name: 'Vite',
+    category: 'languages',
+    level: 'Proficient',
+    experienceYears: 2,
+    highlight: 'Fast HMR, Vite plugins, lean production builds, TS-first config.',
+    associatedProjects: ['leolabs-hub', 'xampiest', 'regulatordigest2']
   },
 
   // Databases & AI
@@ -65,7 +81,7 @@ export const TECH_STACK: TechItem[] = [
     category: 'databases_ai',
     level: 'Advanced',
     experienceYears: 2,
-    highlight: 'HNSW indexes, cosine similarity tuning, hybrid lexical-semantic filtering.',
+    highlight: '768-dim HNSW indexes, cosine similarity tuning, hybrid lexical-semantic filtering.',
     associatedProjects: ['regulatordigest2']
   },
   {
@@ -89,7 +105,7 @@ export const TECH_STACK: TechItem[] = [
     category: 'databases_ai',
     level: 'Proficient',
     experienceYears: 1,
-    highlight: 'Fast token generation for interactive voice dialog and low-latency chat completions.',
+    highlight: 'Fast token generation for interactive dialog, primary LLM with fallback chains.',
     associatedProjects: ['regulatordigest2']
   },
   {
@@ -97,7 +113,7 @@ export const TECH_STACK: TechItem[] = [
     category: 'databases_ai',
     level: 'Proficient',
     experienceYears: 1,
-    highlight: 'Hosted embedding models, semantic similarity, batching for vector pipelines.',
+    highlight: 'multilingual-e5-base embeddings, semantic similarity, batching for vector pipelines.',
     associatedProjects: ['regulatordigest2']
   },
 
@@ -119,20 +135,36 @@ export const TECH_STACK: TechItem[] = [
     associatedProjects: ['leolabs-hub', 'xampiest']
   },
   {
+    name: 'Render',
+    category: 'infra',
+    level: 'Proficient',
+    experienceYears: 2,
+    highlight: 'Multi-worker container services, scheduled jobs, custom domains.',
+    associatedProjects: ['regulatordigest2']
+  },
+  {
     name: 'Telegram Bot API',
     category: 'infra',
     level: 'Proficient',
     experienceYears: 2,
-    highlight: 'Long-polling & webhook integrations, inline keyboards, rate-limit handling.',
+    highlight: 'Long-polling, Mini Apps, inline keyboards, rate-limit handling, webhook delivery.',
     associatedProjects: ['regulatordigest2']
   },
   {
-    name: 'Render & Cloud Run',
+    name: 'Resend & Email APIs',
     category: 'infra',
     level: 'Proficient',
     experienceYears: 1,
-    highlight: 'Containerized background services, autoscaling worker pools, private networking.',
-    associatedProjects: []
+    highlight: 'Transactional email templates, bounce handling, domain verification.',
+    associatedProjects: ['regulatordigest2']
+  },
+  {
+    name: 'Sentry & PostHog',
+    category: 'infra',
+    level: 'Proficient',
+    experienceYears: 1,
+    highlight: 'Error capture with context, performance tracing, lightweight product analytics.',
+    associatedProjects: ['regulatordigest2']
   },
   {
     name: 'Git & CI/CD',
