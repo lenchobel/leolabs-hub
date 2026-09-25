@@ -1,46 +1,17 @@
-import React, { useState, useMemo, useEffect } from 'react';
-import { Search, Filter, Plus, Globe, FolderPlus } from 'lucide-react';
-import { PROJECTS as DEFAULT_PROJECTS, CATEGORIES } from '../data/projects';
+import React, { useState, useMemo } from 'react';
+import { Search, Filter } from 'lucide-react';
+import { PROJECTS, CATEGORIES } from '../data/projects';
 import { Project, ProjectCategory } from '../types';
 import { ProjectCard } from './ProjectCard';
 import { ProjectDetailModal } from './ProjectDetailModal';
-import { AddProjectModal } from './AddProjectModal';
 
 export const ProjectShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [inspectingProject, setInspectingProject] = useState<Project | null>(null);
-  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
-  // Load projects from local storage or fallback to data file
-  const [projectsList, setProjectsList] = useState<Project[]>(() => {
-    try {
-      const saved = localStorage.getItem('leolabs_projects');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed)) return parsed;
-      }
-    } catch {
-      // fallback
-    }
-    return DEFAULT_PROJECTS;
-  });
-
-  useEffect(() => {
-    try {
-      localStorage.setItem('leolabs_projects', JSON.stringify(projectsList));
-    } catch {
-      // ignore
-    }
-  }, [projectsList]);
-
-  const handleAddProject = (newProject: Project) => {
-    setProjectsList((prev) => [newProject, ...prev]);
-  };
-
-  const handleDeleteProject = (id: string) => {
-    setProjectsList((prev) => prev.filter((p) => p.id !== id));
-  };
+  // Source of truth: the data file. Visitors can only inspect, not add.
+  const projectsList = PROJECTS;
 
   // Filter projects by category and search keyword
   const filteredProjects = useMemo(() => {
@@ -90,34 +61,24 @@ export const ProjectShowcase: React.FC = () => {
               Application Showcase
             </h2>
             <p className="text-zinc-400 text-xs sm:text-sm mt-1.5 max-w-xl leading-relaxed">
-              Production web applications, low-latency audio pipelines, and developer tools deployed across <span className="text-zinc-200 font-mono">*.leolabs.com.et</span>.
+              Production web applications, low-latency pipelines, and developer tools shipped
+              across the web, Telegram, and email.
             </p>
           </div>
 
-          {/* Actions: Add App + Quick Search */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            <button
-              type="button"
-              onClick={() => setIsAddModalOpen(true)}
-              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-zinc-950 bg-white hover:bg-zinc-200 rounded-lg transition-colors whitespace-nowrap min-h-[38px]"
-            >
-              <Plus className="w-3.5 h-3.5" />
-              <span>Add Application</span>
-            </button>
-
-            {projectsList.length > 0 && (
-              <div className="relative w-full sm:w-64">
-                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search stack or name..."
-                  className="w-full bg-[#10121a] border border-zinc-800 rounded-lg pl-9 pr-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-500 transition-colors font-mono min-h-[38px]"
-                />
-              </div>
-            )}
-          </div>
+          {/* Search */}
+          {projectsList.length > 0 && (
+            <div className="relative w-full sm:w-64">
+              <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search stack or name..."
+                className="w-full bg-[#10121a] border border-zinc-800 rounded-lg pl-9 pr-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-500 transition-colors font-mono min-h-[38px]"
+              />
+            </div>
+          )}
         </div>
 
         {/* Filter Bar (Only shown if applications exist) */}
@@ -157,7 +118,7 @@ export const ProjectShowcase: React.FC = () => {
           </div>
         )}
 
-        {/* Responsive Grid or Empty Space Ready to Fill */}
+        {/* Responsive Grid or "Coming Soon" Empty State */}
         {filteredProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project) => (
@@ -165,7 +126,6 @@ export const ProjectShowcase: React.FC = () => {
                 key={project.id}
                 project={project}
                 onInspect={(p) => setInspectingProject(p)}
-                onDelete={handleDeleteProject}
               />
             ))}
           </div>
@@ -188,39 +148,19 @@ export const ProjectShowcase: React.FC = () => {
             </button>
           </div>
         ) : (
-          /* Clean Architectural Space Ready for Real Applications */
+          /* No projects registered yet — minimal placeholder, no admin UI */
           <div className="rounded-xl border border-dashed border-zinc-800 bg-[#0d0f14]/60 p-8 sm:p-12 text-center">
-            <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center mx-auto mb-4 text-zinc-400">
-              <FolderPlus className="w-6 h-6" />
-            </div>
             <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
-              Application Showcase Ready
+              New systems shipping soon
             </h3>
             <p className="text-xs sm:text-sm text-zinc-400 mt-2 max-w-md mx-auto leading-relaxed">
-              No placeholder or non-existent applications are displayed. When you are ready to showcase your real services, add them directly below or configure them in <code className="text-zinc-200 font-mono bg-zinc-900 px-1.5 py-0.5 rounded border border-zinc-800">src/data/projects.ts</code>.
+              This section is being updated. Check back shortly.
             </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              <button
-                type="button"
-                onClick={() => setIsAddModalOpen(true)}
-                className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-zinc-950 bg-white hover:bg-zinc-200 rounded-lg transition-colors shadow-sm"
-              >
-                <Plus className="w-4 h-4" />
-                <span>Add Your First Application</span>
-              </button>
-            </div>
           </div>
         )}
       </div>
 
-      {/* Add Project Modal */}
-      <AddProjectModal
-        isOpen={isAddModalOpen}
-        onClose={() => setIsAddModalOpen(false)}
-        onAddProject={handleAddProject}
-      />
-
-      {/* Deep Architecture & Specs Modal */}
+      {/* Detail / Spec Modal (read-only) */}
       <ProjectDetailModal
         project={inspectingProject}
         onClose={() => setInspectingProject(null)}
