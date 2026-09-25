@@ -43,7 +43,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
               </a>
 
               <a
-                href="https://github.com/leolabs-et"
+                href="https://github.com/lenchobel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-zinc-200 hover:text-white bg-zinc-900 hover:bg-zinc-800 rounded-lg border border-zinc-800 transition-colors"
@@ -73,7 +73,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
             <div className="pt-6 border-t border-zinc-800/80 grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 max-w-xl">
               <div className="p-3 sm:p-0 rounded-lg bg-zinc-900/40 sm:bg-transparent border border-zinc-800/40 sm:border-0">
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white tabular-nums tracking-tight">
-                  &lt; 240ms
+                  &lt; 500ms
                 </div>
                 <div className="text-xs text-zinc-400 mt-0.5">
                   Voice-to-Voice Latency
@@ -82,7 +82,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
 
               <div className="p-3 sm:p-0 rounded-lg bg-zinc-900/40 sm:bg-transparent border border-zinc-800/40 sm:border-0">
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white tabular-nums tracking-tight">
-                  4.8M+
+                  100K+
                 </div>
                 <div className="text-xs text-zinc-400 mt-0.5">
                   pgvector Embeddings
@@ -91,10 +91,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
 
               <div className="col-span-2 sm:col-span-1 p-3 sm:p-0 rounded-lg bg-zinc-900/40 sm:bg-transparent border border-zinc-800/40 sm:border-0">
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white tabular-nums tracking-tight">
-                  99.99%
+                  Reliable
                 </div>
                 <div className="text-xs text-zinc-400 mt-0.5">
-                  Job Delivery Guarantee
+                  Async Job Delivery
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
                     Leo
                   </h3>
                   <p className="text-xs font-mono text-zinc-400 truncate">
-                    Systems & Backend Architect
+                    Systems & Backend Engineer
                   </p>
                   <p className="text-[11px] text-zinc-500 mt-0.5 font-mono">
                     leolabs.com.et · Remote Worldwide

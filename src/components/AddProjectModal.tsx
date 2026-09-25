@@ -55,7 +55,7 @@ export const AddProjectModal: React.FC<AddProjectModalProps> = ({
       techStack: stack.length > 0 ? stack : ['FastAPI', 'Python', 'Docker'],
       subdomain: formattedSubdomain,
       liveDemoUrl: liveDemoUrl || `https://${formattedSubdomain}`,
-      githubUrl: githubUrl || `https://github.com/leolabs-et/${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
+      githubUrl: githubUrl || `https://github.com/lenchobel/${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
       hasDownloadRelease,
       releaseVersion: hasDownloadRelease ? releaseVersion || 'v1.0.0' : undefined,
       releaseUrl: hasDownloadRelease ? releaseUrl : undefined,
@@ -222,7 +222,7 @@ export const AddProjectModal: React.FC<AddProjectModalProps> = ({
                 type="url"
                 value={githubUrl}
                 onChange={(e) => setGithubUrl(e.target.value)}
-                placeholder="https://github.com/leolabs-et/..."
+                placeholder="https://github.com/lenchobel/..."
                 className="w-full bg-[#10121a] border border-zinc-800 rounded-lg px-3.5 py-2.5 text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-500 font-mono text-xs"
               />
             </div>

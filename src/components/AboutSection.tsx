@@ -19,10 +19,10 @@ export const AboutSection: React.FC = () => {
             </h2>
             <div className="space-y-3.5 text-xs sm:text-sm text-zinc-300 leading-relaxed">
               <p>
-                My work centers on the intersection of <strong className="text-white">distributed backend systems</strong>, <strong className="text-white">real-time streaming AI pipelines</strong>, and <strong className="text-white">developer tooling</strong>. Over the past 6+ years, I have architected and deployed services that process millions of events daily across high-concurrency microservice topologies.
+                My work centers on the intersection of <strong className="text-white">distributed backend systems</strong>, <strong className="text-white">real-time streaming AI pipelines</strong>, and <strong className="text-white">developer tooling</strong>. Over the past 2+ years, I have shipped production services spanning async FastAPI backends, Telegram delivery bots, and hybrid semantic search on top of PostgreSQL + pgvector.
               </p>
               <p>
-                Whether orchestrating bidirectional WebSockets for conversational voice assistants with sub-250ms turnaround or indexing millions of multidimensional embeddings in pgvector, I prioritize deterministic performance, rigorous error budgets, and clean system boundaries.
+                Whether orchestrating WebSocket voice pipelines for low-latency assistants or indexing multidimensional embeddings in pgvector for semantic retrieval, I prioritize deterministic performance, rigorous error handling, and clean system boundaries.
               </p>
               <p>
                 At <span className="text-zinc-200 font-mono">leolabs.com.et</span>, every application is designed to solve real operational bottlenecks: eliminating audio jitter, pruning bloated Docker images, and replacing heavyweight daemons with zero-allocation compiled binaries.

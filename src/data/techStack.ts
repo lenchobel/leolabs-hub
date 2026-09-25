@@ -5,49 +5,49 @@ export const TECH_STACK: TechItem[] = [
   {
     name: 'Python',
     category: 'languages',
-    level: 'Expert',
-    experienceYears: 6,
-    highlight: 'AsyncIO concurrency, uvloop, Pydantic v2, PyTorch pipelines, low-latency audio processing.',
+    level: 'Advanced',
+    experienceYears: 2,
+    highlight: 'AsyncIO concurrency, uvloop, Pydantic v2, async FastAPI services for streaming workloads.',
     associatedProjects: []
   },
   {
     name: 'FastAPI',
     category: 'languages',
-    level: 'Expert',
-    experienceYears: 5,
-    highlight: 'High-speed REST and full-duplex WebSockets with dependency injection and OpenAPI schemas.',
+    level: 'Advanced',
+    experienceYears: 2,
+    highlight: 'REST endpoints, full-duplex WebSockets, dependency injection, OpenAPI schemas.',
     associatedProjects: []
   },
   {
     name: 'TypeScript',
     category: 'languages',
-    level: 'Expert',
-    experienceYears: 5,
-    highlight: 'Strict typing, generic type-safe APIs, full-stack client-server contracts, AST parsers.',
+    level: 'Advanced',
+    experienceYears: 2,
+    highlight: 'Strict typing, generic type-safe APIs, full-stack client-server contracts.',
     associatedProjects: []
   },
   {
     name: 'Node.js',
     category: 'languages',
-    level: 'Expert',
-    experienceYears: 6,
-    highlight: 'Event-driven microservices, BullMQ job queues, custom stream transformers, worker threads.',
+    level: 'Proficient',
+    experienceYears: 2,
+    highlight: 'Event-driven services, BullMQ job queues, worker threads for background tasks.',
     associatedProjects: []
   },
   {
     name: 'Go',
     category: 'languages',
-    level: 'Advanced',
-    experienceYears: 3,
-    highlight: 'Goroutine worker pools, channel backpressure, SIMD memory-mapped CLI binaries, zero-alloc networking.',
+    level: 'Proficient',
+    experienceYears: 1,
+    highlight: 'Goroutine worker pools, channel-based backpressure, basic CLI tooling.',
     associatedProjects: []
   },
   {
     name: 'Next.js / React',
     category: 'languages',
-    level: 'Advanced',
-    experienceYears: 4,
-    highlight: 'Server Components, edge middleware, responsive real-time dashboards, modern design systems.',
+    level: 'Proficient',
+    experienceYears: 2,
+    highlight: 'App Router, server components, responsive real-time UIs, design systems.',
     associatedProjects: []
   },
 
@@ -55,99 +55,99 @@ export const TECH_STACK: TechItem[] = [
   {
     name: 'PostgreSQL',
     category: 'databases_ai',
-    level: 'Expert',
-    experienceYears: 6,
-    highlight: 'Complex window queries, partition indexing, advisory locks for concurrency, pgBouncer connection pooling.',
+    level: 'Advanced',
+    experienceYears: 2,
+    highlight: 'Window queries, partial/compound indexes, advisory locks, pgBouncer pooling.',
     associatedProjects: []
   },
   {
     name: 'pgvector',
     category: 'databases_ai',
-    level: 'Expert',
+    level: 'Advanced',
     experienceYears: 2,
-    highlight: 'HNSW vector indexes, cosine similarity tuning, hybrid lexical-semantic filtering at scale.',
+    highlight: 'HNSW indexes, cosine similarity tuning, hybrid lexical-semantic filtering.',
     associatedProjects: []
   },
   {
     name: 'Supabase',
     category: 'databases_ai',
     level: 'Advanced',
-    experienceYears: 3,
-    highlight: 'Row Level Security (RLS), edge functions, realtime Postgres subscriptions, automated backup pipelines.',
+    experienceYears: 2,
+    highlight: 'Row Level Security (RLS), edge functions, realtime Postgres subscriptions.',
     associatedProjects: []
   },
   {
     name: 'Redis',
     category: 'databases_ai',
-    level: 'Expert',
-    experienceYears: 5,
-    highlight: 'In-memory caching, distributed locks (Redlock), Redis Streams, Pub/Sub event busses.',
+    level: 'Proficient',
+    experienceYears: 2,
+    highlight: 'In-memory caching, distributed locks, Redis Streams, Pub/Sub event buses.',
     associatedProjects: []
   },
   {
     name: 'Groq & LPUs',
     category: 'databases_ai',
-    level: 'Expert',
-    experienceYears: 2,
-    highlight: 'Ultra-fast token generation (>300 tok/sec) for real-time interactive voice dialog systems.',
+    level: 'Proficient',
+    experienceYears: 1,
+    highlight: 'Fast token generation for interactive voice dialog and low-latency chat completions.',
     associatedProjects: []
   },
   {
-    name: 'Llama & DeepSeek',
+    name: 'Hugging Face & SentenceTransformers',
     category: 'databases_ai',
-    level: 'Advanced',
-    experienceYears: 2,
-    highlight: 'Open-weights model deployment, function calling schemas, prompt engineering, speculative decoding.',
+    level: 'Proficient',
+    experienceYears: 1,
+    highlight: 'Hosted embedding models, semantic similarity, batching for vector pipelines.',
     associatedProjects: []
   },
 
   // Infrastructure & Deployment
   {
-    name: 'Docker & OCI',
+    name: 'Docker',
     category: 'infra',
-    level: 'Expert',
-    experienceYears: 5,
-    highlight: 'Multi-stage lean container builds (Alpine / Distroless), docker-compose orchestrations, health probes.',
+    level: 'Advanced',
+    experienceYears: 2,
+    highlight: 'Multi-stage lean container builds (Alpine / Distroless), docker-compose stacks.',
     associatedProjects: []
   },
   {
     name: 'Vercel',
     category: 'infra',
     level: 'Advanced',
-    experienceYears: 4,
-    highlight: 'Edge functions, domain routing, preview environments, zero-config CI/CD deployments.',
+    experienceYears: 2,
+    highlight: 'Edge functions, domain routing, preview environments, zero-config CI/CD.',
     associatedProjects: []
   },
   {
-    name: 'Cloudflare Pages & Workers',
+    name: 'Telegram Bot API',
     category: 'infra',
-    level: 'Advanced',
-    experienceYears: 3,
-    highlight: 'Global edge network delivery, DNS orchestration, Web Crypto HMAC verification, R2 bucket storage.',
+    level: 'Proficient',
+    experienceYears: 2,
+    highlight: 'Long-polling & webhook integrations, inline keyboards, rate-limit handling.',
     associatedProjects: []
   },
   {
     name: 'Render & Cloud Run',
     category: 'infra',
-    level: 'Advanced',
-    experienceYears: 4,
-    highlight: 'Containerized background services, autoscaling worker pools, private networking & Redis clusters.',
+    level: 'Proficient',
+    experienceYears: 1,
+    highlight: 'Containerized background services, autoscaling worker pools, private networking.',
     associatedProjects: []
   },
   {
     name: 'Git & CI/CD',
     category: 'infra',
-    level: 'Expert',
-    experienceYears: 6,
-    highlight: 'GitHub Actions matrix testing, automated semantic versioning, binary release packaging, code audits.',
+    level: 'Advanced',
+    experienceYears: 2,
+    highlight: 'GitHub Actions matrix testing, automated releases, branch-based previews.',
     associatedProjects: []
   },
   {
     name: 'Linux Systems',
     category: 'infra',
-    level: 'Expert',
-    experienceYears: 6,
-    highlight: 'Systemd service management, kernel tuning (sysctl, epoll, open files limits), bash automation.',
+    level: 'Advanced',
+    experienceYears: 2,
+    highlight: 'Systemd service management, basic kernel tuning, bash automation, file descriptors.',
     associatedProjects: []
   }
 ];

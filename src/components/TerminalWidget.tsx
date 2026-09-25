@@ -83,13 +83,13 @@ export const TerminalWidget: React.FC = () => {
       ];
     } else if (lower === 'about') {
       outputResult = [
-        'LEO — Principal Backend Engineer & Systems Architect',
+        'LEO — Backend Software Engineer',
         '------------------------------------------------------------',
         '• Domain: https://leolabs.com.et',
-        '• Focus: Low-latency voice pipelines, pgvector retrieval,',
-        '         distributed job schedulers, and zero-alloc Go/C binaries.',
+        '• Focus: Async FastAPI backends, pgvector retrieval, Telegram',
+        '         delivery bots, and developer tooling.',
         '• Philosophy: "Systems should be simple, observable, resilient, and fast."',
-        '• Status: Available for technical lead, backend architecture & consulting.'
+        '• Status: Available for backend engineering roles & project contracts.'
       ];
     } else if (lower === 'projects') {
       if (PROJECTS.length === 0) {
@@ -115,11 +115,12 @@ export const TerminalWidget: React.FC = () => {
     } else if (lower === 'skills') {
       outputResult = [
         'CORE TECHNICAL CAPABILITIES:',
-        '  Languages:    Python 3.12 (AsyncIO, uvloop), Go (Goroutines), TypeScript, Node.js',
-        '  Frameworks:   FastAPI, Next.js, Express, PyTorch, BullMQ, Pydantic v2',
-        '  Databases:    PostgreSQL, pgvector, Supabase, Redis (Streams, Clusters)',
-        '  AI & Audio:   Groq (LPUs), Deepgram Nova-2, Llama 3, DeepSeek, WebSockets',
-        '  DevOps:       Docker, Vercel, Cloudflare, Render, Linux systemd, CI/CD'
+        '  Languages:    Python 3.12 (AsyncIO, uvloop), TypeScript, Node.js, Go (basic)',
+        '  Frameworks:   FastAPI, Next.js, Vite, BullMQ, Pydantic v2, React 19',
+        '  Databases:    PostgreSQL, pgvector, Supabase (RLS), Redis (Streams)',
+        '  AI / Search:  Groq (LPUs), Hugging Face embeddings, pgvector HNSW',
+        '  Delivery:     Telegram Bot API, WebSockets, REST APIs',
+        '  DevOps:       Docker, Vercel, GitHub Actions, Linux systemd'
       ];
     } else if (lower === 'curl status' || lower.startsWith('curl')) {
       if (PROJECTS.length === 0) {
@@ -142,25 +143,26 @@ export const TerminalWidget: React.FC = () => {
       outputResult = [
         'CAREER SUMMARY: Leo (leolabs.com.et)',
         '============================================================',
-        'Role: Principal Backend Architect / Staff Software Engineer',
+        'Role: Backend Software Engineer',
         'Location: Remote (Worldwide)',
         '',
         'EXPERIENCE HIGHLIGHTS:',
-        '• Built end-to-end real-time bidirectional voice assistant pipeline with < 240ms',
-        '  turnaround latency using FastAPI WebSockets, Groq LPUs, and Deepgram.',
-        '• Scaled PostgreSQL + pgvector clusters handling 4.8M+ vector embeddings',
-        '  with sub-20ms p99 query latency and 68% token reduction via semantic caching.',
-        '• Designed distributed cron scheduling platform delivering 14M+ monthly webhooks',
-        '  with guaranteed idempotency and exponential jitter retry policies.',
-        '• Created open-source zero-alloc CLI binaries in Go with SIMD JSON log parsing.'
+        '• Built async FastAPI services with WebSocket streaming for low-latency',
+        '  conversational AI, integrating Groq LLMs and HF-hosted embeddings.',
+        '• Designed PostgreSQL + pgvector retrieval with HNSW indexes, hybrid',
+        '  lexical-semantic filtering, and semantic caching to cut token spend.',
+        '• Shipped a Telegram delivery bot over Supabase with Row Level Security',
+        '  and Postgres realtime subscriptions for end-user feedback loops.',
+        '• Built TypeScript + React frontends (Next.js / Vite) for portfolio and',
+        '  internal tooling, with CI/CD on Vercel preview deployments.'
       ];
     } else if (lower === 'sudo hire-me' || lower === 'hire-me' || lower === 'hire') {
       outputResult = [
         'RECRUITING & CONTRACTING INQUIRY',
         '------------------------------------------------------------',
         '• Primary Email: leobell444@gmail.com',
-        '• GitHub: https://github.com/leolabs-et',
-        '• Availability: Full-time Staff Roles & High-Impact Architecture Contracts',
+        '• GitHub: https://github.com/lenchobel',
+        '• Availability: Full-time Backend Engineering Roles & Project Contracts',
         '',
         'Use the Contact section below or email directly!'
       ];
@@ -170,7 +172,7 @@ export const TerminalWidget: React.FC = () => {
         'DIRECT CONTACT CHANNELS:',
         '  Email:     leobell444@gmail.com',
         '  Domain:    https://leolabs.com.et',
-        '  GitHub:    https://github.com/leolabs-et'
+        '  GitHub:    https://github.com/lenchobel'
       ];
     } else if (lower === 'whoami') {
       outputResult = 'visitor@leolabs-client [guest session, permissions: READ_ONLY]';

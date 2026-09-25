@@ -48,7 +48,7 @@ export const ContactSection: React.FC = () => {
                 Let's Discuss Systems Architecture.
               </h2>
               <p className="text-xs sm:text-sm text-zinc-400 mt-2 leading-relaxed">
-                Whether you are hiring for senior backend engineering roles, scaling an audio AI pipeline, or seeking technical advisory for your infrastructure, feel free to reach out directly.
+                Whether you are hiring for backend engineering roles, scaling an audio AI pipeline, or seeking technical advisory for your infrastructure, feel free to reach out directly.
               </p>
             </div>
 
@@ -93,7 +93,7 @@ export const ContactSection: React.FC = () => {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <a
-                  href="https://github.com/leolabs-et"
+                  href="https://github.com/lenchobel"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-[#0d0f14] border border-zinc-800 hover:border-zinc-700 transition-colors flex items-center justify-between group min-h-[44px]"
@@ -106,7 +106,7 @@ export const ContactSection: React.FC = () => {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/leolabs"
+                  href="https://linkedin.com/in/lenchobel"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-[#0d0f14] border border-zinc-800 hover:border-zinc-700 transition-colors flex items-center justify-between group min-h-[44px]"
@@ -193,7 +193,7 @@ export const ContactSection: React.FC = () => {
                       onChange={(e) => setFormData({ ...formData, roleOrProject: e.target.value })}
                       className="w-full bg-[#10121a] border border-zinc-800 rounded-lg px-3.5 py-2.5 text-sm sm:text-xs text-white focus:outline-none focus:border-zinc-500 transition-colors font-mono"
                     >
-                      <option value="Full-Time Role">Full-Time Staff / Senior Engineering Role</option>
+                      <option value="Full-Time Role">Full-Time Backend Engineering Role</option>
                       <option value="Voice AI Pipeline">Voice AI & Streaming Pipeline Architecture</option>
                       <option value="Vector RAG Systems">Vector Retrieval & Database Engineering</option>
                       <option value="Open Source Tooling">Open-Source Collaboration / Feature Request</option>

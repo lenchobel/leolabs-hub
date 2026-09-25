@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
               Contact
             </a>
             <a
-              href="https://github.com/leolabs-et"
+              href="https://github.com/lenchobel"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors flex items-center gap-1"

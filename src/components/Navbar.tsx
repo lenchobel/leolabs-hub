@@ -85,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
         {/* Action Buttons */}
         <div className="hidden sm:flex items-center gap-3 shrink-0">
           <a
-            href="https://github.com/leolabs-et"
+            href="https://github.com/lenchobel"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-md border border-zinc-800 transition-colors"
@@ -158,7 +158,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
 
           <div className="pt-3 border-t border-zinc-800 flex items-center gap-3">
             <a
-              href="https://github.com/leolabs-et"
+              href="https://github.com/lenchobel"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 min-h-[44px] text-xs font-medium text-zinc-300 bg-zinc-900 rounded-lg border border-zinc-800"
