@@ -96,8 +96,7 @@ export const TerminalWidget: React.FC = () => {
         outputResult = [
           'NO APPLICATIONS REGISTERED YET.',
           '------------------------------------------------------------',
-          'Deploy your real projects in src/data/projects.ts or use the',
-          '"+ Add Application" button on the webpage to populate them.'
+          'New systems are being added — check back shortly.'
         ];
       } else {
         outputResult = [
