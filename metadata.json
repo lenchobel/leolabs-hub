@@ -1,0 +1,8 @@
+{
+  "name": "Leo Labs - Systems & Backend Portfolio",
+  "description": "Portfolio & Project Showcase for Leo (leolabs.com.et) — Backend Architecture, Automated Voice Pipelines, Distributed Systems & Developer Tooling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
