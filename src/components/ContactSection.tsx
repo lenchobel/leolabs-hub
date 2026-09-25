@@ -106,7 +106,7 @@ export const ContactSection: React.FC = () => {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/lenchobel"
+                  href="https://www.linkedin.com/in/lencho-dev-a47a70402"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-[#0d0f14] border border-zinc-800 hover:border-zinc-700 transition-colors flex items-center justify-between group min-h-[44px]"
